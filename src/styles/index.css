@@ -13,6 +13,7 @@ body {
 
 #header {
   position: fixed;
+  top: 0;
   z-index: 100;
   width: 100%;
   height: 50px;
@@ -95,7 +96,8 @@ body {
   padding: 5px 20px 5px 0;
   height: 100%;
 }
-#header #headerRight div div {
+#header #headerRight div a {
+  text-decoration: none;
   display: flex;
   margin-left: 10px;
   height: 100%;
@@ -107,7 +109,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-#header #headerRight div div:hover {
+#header #headerRight div a:hover {
   background-color: #3A3B3C;
 }
 
@@ -117,8 +119,10 @@ body {
   margin: auto;
 }
 #content #contentMid {
+  margin: auto;
   height: 100%;
-  margin: 80px;
+  margin-top: 80px;
+  width: 636px;
 }
 #content #contentMid .contentMidFirst {
   background-color: #242526;
@@ -200,19 +204,19 @@ body {
   grid-template-columns: auto auto auto;
   height: 100%;
 }
-#content #contentMid #contentMidBETWEEN > div:last-child div {
+#content #contentMid #contentMidBETWEEN > div:last-child a {
   height: 100%;
   text-align: center;
 }
-#content #contentMid #contentMidBETWEEN > div:last-child div i {
+#content #contentMid #contentMidBETWEEN > div:last-child a i {
   font-size: 20px;
   margin-right: 10px;
 }
-#content #contentMid #contentMidBETWEEN > div:last-child div span {
+#content #contentMid #contentMidBETWEEN > div:last-child a span {
   justify-items: center;
   color: #B0B3B8;
 }
-#content #contentMid #contentMidBETWEEN > div:last-child div:hover {
+#content #contentMid #contentMidBETWEEN > div:last-child a:hover {
   cursor: pointer;
   border-radius: 10px;
   background-color: #3A3B3C;
@@ -271,6 +275,7 @@ body {
   top: 50px;
   right: 0;
   height: 100%;
+  width: 381.6px;
   overflow-y: scroll;
   /* Handle */
 }
@@ -330,6 +335,7 @@ body {
   padding-top: 30px;
   top: 50px;
   height: 100%;
+  width: 381.6px;
   overflow-y: scroll;
   /* Handle */
 }
@@ -522,8 +528,14 @@ body {
   #header #headerRight {
     width: 310px;
   }
+  #content #contentLeft {
+    width: 310px;
+  }
+  #content #contentRight {
+    width: 310px;
+  }
 }
-@media only screen and (max-width: 1260px) {
+@media only screen and (max-width: 1261px) {
   #header #headerLeft {
     width: 150px;
     height: 100%;
@@ -544,25 +556,33 @@ body {
     text-align: center;
   }
   #header #headerLeft #search input {
-    visibility: hidden;
+    display: none;
     background-color: #3A3B3C;
     outline: none;
   }
   #header #headerRight {
-    width: 150px;
+    width: 228px;
+  }
+  #content #contentLeft {
+    width: 228px;
+  }
+  #content #contentRight {
+    width: 228px;
+  }
+  #content #contentRight ul li:first-child span {
+    font-size: 17px;
   }
 }
 @media only screen and (max-width: 1100px) {
-  #headerMid {
+  #header #headerMid {
     margin-left: 150px;
-    width: 580px;
+    width: 540px;
   }
   #contentLeft {
-    visibility: hidden;
+    display: none;
   }
-  #contentMid {
+  #content #contentMid {
     width: 60%;
-    float: left;
     margin-left: 50px;
   }
 }
@@ -587,17 +607,31 @@ body {
     text-align: center;
   }
   #header #headerLeft #search input {
-    visibility: hidden;
+    display: none;
     background-color: #3A3B3C;
     outline: none;
   }
   #header #headerMid {
-    visibility: hidden;
+    display: none;
   }
-  #contentRight {
-    visibility: hidden;
+  #content #contentRight {
+    display: none;
   }
-  #contentMid {
-    width: 100%;
+  #content #contentMid {
+    margin-left: 0;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #content #contentMid #contentMidBETWEEN > div:last-child a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #content #contentMid #contentMidBETWEEN > div:last-child a span {
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */
