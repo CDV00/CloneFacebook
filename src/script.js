@@ -63,7 +63,48 @@ function showGlass() {
 
 
 ///
+let height = 15;
+
+const parentTextArea = document.getElementById("demo");
+
+var heightParentTextArea = parseInt(parentTextArea.offsetHeight);
+
+function auto_height(textArea) {
+  textArea.style.height = "94px";
+  textArea.style.height = (textArea.scrollHeight)+"px";
+    //
+    parentTextArea.style.height = "94px";
+    
+
+    
 
 
+    parentTextArea.style.height=(parentTextArea.scrollHeight)+"px";
+    //
+    const main =document.getElementById("main");
+    
+    main.style.height = "400px";
+    main.style.height=(main.scrollHeight)+"px";
+    //
+    
+    //
+    if(parentTextArea.scrollHeight > heightParentTextArea){
+      heightParentTextArea = parentTextArea.scrollHeight;
+      height = (height - 1);
+      main.style.top = height+"%";
+    }  
+    //
+    if(parentTextArea.scrollHeight < heightParentTextArea){
+      heightParentTextArea = parentTextArea.scrollHeight;
 
-
+      height = (height + 1);
+      main.style.top = height+"%";
+    } 
+}
+///
+function CloseNewPost() {
+  document.getElementById("newPost").style.display="none";
+}
+function OpenNewPost() {
+  document.getElementById("newPost").style.display="block";
+}

@@ -569,15 +569,16 @@
                             preserveAspectRatio="xMidYMid slice" width="100%" src="../asset/image/N_ZaHan.jpg">
                         </image>
                     </a>
-                    <div class="form-control rounded-pill col my-1 border-0" id="search" role="search">
+                    <div class="form-control rounded-pill col my-1 border-0" id="search" onclick="OpenNewPost()" role="search">
                         <span>Bạn đang nghĩ gì thế?</span>
                     </div>
-                    <div class="post">
-                        <div class="main">
+                    <div class="newPost" id="newPost">
+                        <div class="bg-outSitePost" onclick="CloseNewPost()"></div>
+                        <div class="main" id="main">
                             <div class="header">
                                 
                                     <span>Tạo bài viết</span>
-                                <a><i class="fa-solid fa-xmark"></i></a>
+                                <a onclick="CloseNewPost()"><i class="fa-solid fa-xmark"></i></a>
                                 
                             </div>
                             <hr>
@@ -591,6 +592,19 @@
                                     <a class="flex-item-left">N_ZaHan</a>
                                     <a style="background-color: #3A3B3C; padding-left: 5px; padding-right: 5px; border-radius: 5px;" class="flex-item-right"><i class="fa-solid fa-earth-americas"></i> Công khai <i class="fa-solid fa-caret-down"></i></a>
                                 </section>
+                            </div>
+                            <div  class="post" id="demo">
+                                <textarea rows="1" class="auto_height" oninput="auto_height(this)" placeholder="Bạn đang nghĩ gì thế?"></textarea>
+                            </div>
+                            <div class="submit">
+                                <a>
+                                    <i class="fa-solid fa-font"></i>
+                                </a>
+                                <a>
+                                    <i class="fa-regular fa-face-smile"></i>
+                                </a>
+                                    
+                                    
                             </div>
                         </div>
                     </div>

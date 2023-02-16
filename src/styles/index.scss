@@ -219,12 +219,11 @@ body {
             div:first-child {
                 height: 100%;
                 display: flex;
-
                 a {
                     margin-right: 20px;
                 }
 
-                div {
+                .form-control {
                     height: 40px;
                     background-color: #3A3B3C;
                     margin-right: 10px;
@@ -233,9 +232,13 @@ body {
 
                         color: #B0B3B8;
                     }
+                    &:hover{
+                        background-color: #4D4E4F;
+                    }
                 }
-                .post{
+                .newPost{
                     //display: none;
+                    
                     position: fixed;
                     z-index: 10;
                     top: 60px;
@@ -244,23 +247,40 @@ body {
                     width: 100%;
                     height: 100%;
                     margin-bottom:0 ;
-                    div{
+                    .bg-outSitePost{
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        position: absolute;
+                        
+                    }
+                    .main{
+                        position: absolute;
+                        left: 50%;
+                        top: 15%;
+                        transform: translateX(-50%);
                         border-radius: 10px;
                         opacity: 1;
                         z-index: 166666;
                         color: #fff;
-                        margin: auto;
-                        margin-top: 60px ;
-                        height: 350px;
+                        //margin: auto;
+                        //margin-top: 60px ;
+                        height: 400px;
                         width: 500px;
                         background-color: #242526;
                         display: block;
+                        z-index: 60;
                         .header{
+                            border-radius: 10px;
+                            margin-right: 0;
                             margin-top: 10px;
                             height: 50px;
                             position: relative;
                                 
                                 span{
+                                    border-radius: 10px;
+                                    background-color: #242526;
+                                    width: 100%;
                                     color: #fff;
                                     height: 100%;
                                     display: flex;
@@ -269,7 +289,7 @@ body {
                                     font-size: 20px;
                                 }
                             a{
-                                
+                                display: flex;
                                 padding: 5px;
                                 //padding: 10px;
                                 position: absolute;
@@ -295,6 +315,7 @@ body {
                             margin: 0;
                         }
                         .info{
+                            background-color: #242526;
                             margin: 10px 0 0 10px;
                             display: flex;
                             height: 50px;
@@ -310,10 +331,54 @@ body {
                                 a{
                                     text-decoration: none;
                                     color:#fff;
+                                    &:hover{
+                                        background-color: #1983ca;
+                                    }
                                 }
                                 display: flex;
                                 flex-direction: column;
                               }
+                        }
+                    }
+                    .post{
+                        
+                        width: 95%;
+                        height: 100px;
+                        margin: 10px 15px;
+                        background-color: #242526;
+                        .auto_height {
+                            height: 100px;
+                            background-color: #242526;
+                            text-align:left;
+                            border: 0;
+                            width: 100%;
+                            color: #fff;
+                            outline: none;
+                          }
+                    }
+                    .submit{
+                        display: flex;
+                        justify-content: space-between;
+                        a:first-child{
+                            margin-left: 10px;
+                        }
+                        a:first-child>i {
+                            color: #fff;
+                            border-radius: 6px;
+                            padding: 15px;
+                            font-size: 15px;
+                            background-image: linear-gradient(to right, red , pink,orange,green, yellow);
+                            &:hover{
+                                padding: 12px;
+                                border: 3px solid #fff;
+                            }
+                        }
+                        a:last-child>i {
+                            font-size: 30px;
+                            color: #5a5b5c;
+                            &:hover{
+                                color: #a6a9ab;
+                            }
                         }
                     }
                 }
