@@ -66,6 +66,7 @@ function showGlass() {
 let height = 15;
 
 const parentTextArea = document.getElementById("demo");
+const post = document.getElementById("myBtn");
 
 var heightParentTextArea = parseInt(parentTextArea.offsetHeight);
 
@@ -100,6 +101,19 @@ function auto_height(textArea) {
       height = (height + 1);
       main.style.top = height+"%";
     } 
+    //alert("aa");
+    var a = textArea.value.length;
+    if(a>0){
+      post.disabled = false;
+      post.style.backgroundColor = "#2374e1";
+      post.classList.add("hoverActive");
+    }
+    else{
+      
+      post.disabled = true;
+      post.style.backgroundColor = "#616162";
+      post.classList.remove("hoverActive");
+    }
 }
 ///
 function CloseNewPost() {
